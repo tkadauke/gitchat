@@ -11,5 +11,5 @@ function poll() {
 poll &
 
 while read line; do
-  ./gitchat-send $line
+  ./gitchat-msg $line
 done
