@@ -1,6 +1,6 @@
 while true; do
   current=`git rev-parse HEAD`
-  ./gitchat-receive
+  ./gitchat-receive >/dev/null
   after=`git rev-parse HEAD`
   git log --oneline $current..$after
   sleep 1

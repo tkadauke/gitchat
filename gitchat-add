@@ -1,2 +1,2 @@
 message=$1
-git commit --allow-empty -m "$message"
+git commit --allow-empty -m "$message" 2>&1 >/dev/null
