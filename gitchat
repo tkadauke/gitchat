@@ -1,5 +1,5 @@
 function poll() {
-  while /bin/true; do
+  while true; do
     current=`git rev-parse HEAD`
     ./gitchat-receive
     after=`git rev-parse HEAD`
