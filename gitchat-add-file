@@ -1,0 +1,4 @@
+mkdir -p files
+cp "$1" files/
+git add files/$1
+git commit -m "Added file '$1'"

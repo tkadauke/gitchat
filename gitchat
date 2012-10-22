@@ -1,0 +1,15 @@
+function poll() {
+  while /bin/true; do
+    current=`git rev-parse HEAD`
+    ./gitchat-receive
+    after=`git rev-parse HEAD`
+    git log $current..$after
+    sleep 1
+  done
+}
+
+poll &
+
+while read line; do
+  ./gitchat-send $line
+done

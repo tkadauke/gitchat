@@ -1,0 +1,2 @@
+./gitchat-add "$1"
+./gitchat-send
