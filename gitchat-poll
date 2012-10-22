@@ -4,6 +4,7 @@ while true; do
   after=`git rev-parse HEAD`
   if [ $current != $after ]; then
     git log --oneline $current..$after
+    echo -e "\a"
   fi
   sleep 1
 done
