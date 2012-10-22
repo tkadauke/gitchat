@@ -1,3 +1,5 @@
+./gitchat-poll &
+
 while read line; do
   ./gitchat-msg "$line"
 done
