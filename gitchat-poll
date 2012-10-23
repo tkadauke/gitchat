@@ -1,9 +1,11 @@
+username=`git config user.name`
+
 while true; do
   current=`git rev-parse HEAD`
   ./gitchat-receive >/dev/null
   after=`git rev-parse HEAD`
   if [ $current != $after ]; then
-    git log --oneline $current..$after
+    git log --pretty=format:"%h %ad%x09%an%x09%s" --date=short $current..$after | grep -v "$username"
     echo -ne "\a"
   fi
   sleep 1
